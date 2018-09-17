@@ -1,0 +1,9 @@
+{% extends 'blog/base.html'%}
+{% block content%}
+    <dir class="border-top pt-3 ">
+        <h1> You have logged out! </h1>
+        <a href="{% url "login" %}">Log In Again</a>
+    </dir>
+{% endblock content%}
+
+
