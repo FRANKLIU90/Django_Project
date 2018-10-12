@@ -10,7 +10,8 @@ class Profile(models.Model):
     def __str__(self):
         return "{}'s Profile".format(self.user)
 
-    def save(self):
+    def save(self, **kwargs): # add **kwargs , or get "save() got an unexpected keyword argument 'force_insert' "
+
         super().save()
         # img = Image.open(self.image.url)
         img = Image.open(self.image.path)
